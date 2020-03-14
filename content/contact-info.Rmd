@@ -1,0 +1,18 @@
+```{block type='col- grid-item', echo=TRUE}
+## Contact information {.box}
+
+<div class = "info-box">
+| right | right |
+|:------|-----:|
+| <span style="color: #454545"><i class="fas fa-map-marker-alt"></i></span> [Vanderbilt University, Nashville, TN, USA](https://www.numericalbrainlab.com)|
+| <span style="color: #454545"><i class="fas fa-envelope"></i></span> darren.j.yeo\@vanderbilt.edu |
+| <span style="color: #454545"><i class="fab fa-orcid"></i></span> [Darren J. Yeo](https://orcid.org/0000-0003-1207-259X) |
+| <span style="color: #454545"><i class="fab fa-github"></i></span> [darrenjyeo](https://github.com/darrenjyeo) |
+| <span style="color: #454545"><i class="fab fa-twitter"></i></span> [darrenjyeo](https://twitter.com/darrenjyeo) |
+| <span style="color: #454545"><i class="fab fa-linkedin-in"></i></span> [Darren J. Yeo](https://www.linkedin.com/in/darrenjyeo) 
+<!-- | <span style="color: #454545"><i class="fas fa-globe"></i></span> [darrenjyeo](https://jiansh.wix.com/darrenyeo) | -->
+<!-- | <span style="color: #454545"><i class="fab fa-researchgate"></i></span> [darrenjyeo](https://www.researchgate.net/profile/Darren_Yeo2) | -->
+<!-- | <span style="color: #454545"><i class="fa fa-phone"></i> +1 615-830-5507 -->
+
+</div>
+```
