@@ -123,7 +123,7 @@ Ph.D. Candidate | Neuroscience
 ```{r}
 cv_entries %>% 
   filter(type == 'education') %>% 
-  mutate(what = ifelse(is.na(year_begin), paste0(what, "."), paste0(what, ", ", "<span style= 'font-weight: 500'>", where, "</span>")),
+  mutate(what = ifelse(is.na(year_begin), what, paste0(what, ", ", "<span style= 'font-weight: 500'>", where, "</span>")),
          what = gsub("NA", "", what),
          what = gsub(", $", "", what),
          what = ifelse(!is.na(url), 
