@@ -1,4 +1,4 @@
 ```{block type="col-1 grid-item", echo=TRUE}
 ## About Me {.box}
-I am broadly interested in understanding how the brain supports learning and to use that knowledge to help students ***learn how to learn***. My current focus is on the acquisition of basic numerical knowledge and complex math skills. Aside from research, I write math curricular materials, and am an author of the Grade 1 and 2 books of the forthcoming 2021 U.S. edition of *Primary Mathematics* (the original "Singapore Math&reg;" series).
+I am broadly interested in understanding how the brain supports learning and to use that knowledge to help students *learn how to optimize their learning*. My current focus is on the acquisition of basic numerical knowledge and complex math skills. Aside from research, I write math curricular materials, and am an author of Grade 1 and 2 books of the forthcoming 2021 U.S. edition of *Primary Mathematics* (the original "Singapore Math&reg;" series).
 ```
