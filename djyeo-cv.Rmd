@@ -154,7 +154,7 @@ cv_entries %>%
   kable()
 ```
 
-<br class="pageBreak"/>
+<!-- <br class="pageBreak"/> -->
 
 # Scholarship
 
@@ -173,7 +173,7 @@ Icons link to additional content
 make_cite <- function(authors,	year,	title = NULL,	journal = NULL,	volume = NULL,	
                       issue = NULL,	pages = NULL,	doi = NULL,	url = NULL,
                       book = NULL, place_published = NULL, conference = NULL,
-                      poster = NULL, conf_loc = NULL, annual_meeting = NULL,
+                      poster = NULL, conf_loc = NULL, annual_meeting = NULL, cancelled = NULL,
                       ...) {
   
   if(!is.null(journal)) {
@@ -215,39 +215,75 @@ make_cite <- function(authors,	year,	title = NULL,	journal = NULL,	volume = NULL
       }
     }
     else if(poster) {
-      if(annual_meeting) {
-       conference <- paste0("Poster presented at the annual meeting of the ", 
+      if(cancelled) {
+        if(annual_meeting) {
+          conference <- paste0("Poster selected to be presented at the cancelled annual meeting of the ", 
                             conference,
                             ", ", 
                             conf_loc,
                             ".") 
-      }
-      else {
-        conference <- paste0("Poster presented at the ", 
+          }
+        else {
+          conference <- paste0("Poster selected to be presented at the ", 
                              conference, 
                              ", ", 
                              conf_loc, 
                              ".") 
+        }
+      }
+      else {
+        if(annual_meeting) {
+          conference <- paste0("Poster presented at the annual meeting of the ", 
+                            conference,
+                            ", ", 
+                            conf_loc,
+                            ".") 
+          }
+        else {
+          conference <- paste0("Poster presented at the ", 
+                             conference, 
+                             ", ", 
+                             conf_loc, 
+                             ".") 
+        }
       }
     }
     else {
-       if(annual_meeting) {
+      if(cancelled) {
+        if(annual_meeting) {
+          conference <- paste0("Talk selected to be presented at the cancelled annual meeting of the ", 
+                            conference, 
+                            ", ", 
+                            conf_loc,
+                            ".")
+          }
+        else {
+        conference <- paste0("Talk selected to be presented at the cancelled ", 
+                             conference, 
+                             ",", 
+                             conf_loc,
+                            ".")
+        }
+      }
+      else {
+        if(annual_meeting) {
           conference <- paste0("Talk presented at the annual meeting of the ", 
                             conference, 
                             ", ", 
                             conf_loc,
-                            ".") 
-      }
-      else {
-        conference <- paste0("Talk presented at the ", 
+                            ".")
+          }
+        else {
+          conference <- paste0("Talk presented at the ", 
                              conference, 
                              ",", 
                              conf_loc,
-                            ".") 
+                            ".")
+        }
       }
     }
   }
-
+  
   authors <- gsub(
     "Yeo, D. J.\\.?",
     "<span style= 'font-weight: 500'>Yeo, D. J.</span>", 
@@ -498,7 +534,7 @@ conf_tbl <- conf_tbl %>%
   mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
   select(-count_within_year)
 
-kable(conf_tbl[seq(1, 2), ])
+kable(conf_tbl[seq(1, 1), ])
 ```
 
 </div>
@@ -508,7 +544,7 @@ kable(conf_tbl[seq(1, 2), ])
 <div class = "hangingindent">
 
 ```{r}
-kable(conf_tbl[seq(3, 13), ])
+kable(conf_tbl[seq(2, 11), ])
 ```
 
 </div>
@@ -518,7 +554,7 @@ kable(conf_tbl[seq(3, 13), ])
 <div class = "hangingindent">
 
 ```{r}
-kable(conf_tbl[seq(14, nrow(conf_tbl)), ])
+kable(conf_tbl[seq(12, nrow(conf_tbl)), ])
 ```
 
 </div>
@@ -588,12 +624,22 @@ regional_tbl <- regional_tbl %>%
   mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
   select(-count_within_year)
 
-kable(regional_tbl[seq(1, nrow(regional_tbl)), ])
+kable(regional_tbl[seq(1, 2), ])
 ```
 
 </div>
 
 <br class="pageBreak">
+
+<div class = "hangingindent">
+
+```{r}
+kable(regional_tbl[seq(3, nrow(regional_tbl)), ])
+```
+
+</div>
+
+<!-- <br class="pageBreak"> -->
 
 # Grants
 
@@ -792,7 +838,7 @@ cv_entries %>%
 
 </div>
 
-<br class="pageBreak">
+<!-- <br class="pageBreak"> -->
 
 # Professional Service
 
